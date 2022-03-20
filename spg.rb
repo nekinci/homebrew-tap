@@ -8,17 +8,17 @@ class Spg < Formula
   version "1.0.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/nekinci/spg/releases/download/v1.0.0/spg_1.0.0_darwin_arm64.tar.gz"
-      sha256 "ba5957bf137250759730f18eeacb1401d33a4cb3cf4d84fddf8de1fc06f9737d"
+    if Hardware::CPU.intel?
+      url "https://github.com/nekinci/spg/releases/download/v1.0.0/spg_1.0.0_darwin_amd64.tar.gz"
+      sha256 "6fef21ad3f47bf4ec1368457b53f29d372354eeb07cb14e6f1bb65f80dc9f0d6"
 
       def install
         bin.install "spg"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/nekinci/spg/releases/download/v1.0.0/spg_1.0.0_darwin_amd64.tar.gz"
-      sha256 "e8f2c946163ec9da7e3358713babf563a44bc1868f1bb45de2037993449dcb39"
+    if Hardware::CPU.arm?
+      url "https://github.com/nekinci/spg/releases/download/v1.0.0/spg_1.0.0_darwin_arm64.tar.gz"
+      sha256 "1d437ee0a18d6f5fe7e7d567b0fc84d900cfd0098fb0750e4f77fd84181c6799"
 
       def install
         bin.install "spg"
@@ -27,17 +27,17 @@ class Spg < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/nekinci/spg/releases/download/v1.0.0/spg_1.0.0_linux_amd64.tar.gz"
-      sha256 "4c1b397eae50febb9a6b3f7adab2eb521e43258eb25ae74bb0517818cf407d63"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/nekinci/spg/releases/download/v1.0.0/spg_1.0.0_linux_arm64.tar.gz"
+      sha256 "b027061b5473ccff4c1f406a5a0c3e84a7f5611b5ca14e7c1a7a71c493fd49f8"
 
       def install
         bin.install "spg"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nekinci/spg/releases/download/v1.0.0/spg_1.0.0_linux_arm64.tar.gz"
-      sha256 "49742404e9fb73072d88df3cbe6e1da5736fdff4131aa475d37acaeddee281f8"
+    if Hardware::CPU.intel?
+      url "https://github.com/nekinci/spg/releases/download/v1.0.0/spg_1.0.0_linux_amd64.tar.gz"
+      sha256 "7e1ece9bf9cd6a337a9521c7eba95709a2dd6775bfd84f95d9d85747776cf7fe"
 
       def install
         bin.install "spg"
