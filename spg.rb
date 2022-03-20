@@ -5,20 +5,20 @@
 class Spg < Formula
   desc ""
   homepage "https://github.com/nekinci/spg"
-  version "1.1.6"
+  version "1.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nekinci/spg/releases/download/v1.1.6/spg_1.1.6_darwin_amd64.tar.gz"
-      sha256 "7b2d07e13b081699a507fc248da0873f131c6eceeffa9360790d50ea338ba92a"
+      url "https://github.com/nekinci/spg/releases/download/v1.0/spg_1.0_darwin_amd64.tar.gz"
+      sha256 "7242834bd1494401615a8ddff8dd980e9c8de61d3334c78cf8bff613491c94e4"
 
       def install
         bin.install "spg"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nekinci/spg/releases/download/v1.1.6/spg_1.1.6_darwin_arm64.tar.gz"
-      sha256 "553f50d77570185bd596aa9ad1b75782e97ff15b9c3d5f183daef2aceec5eabb"
+      url "https://github.com/nekinci/spg/releases/download/v1.0/spg_1.0_darwin_arm64.tar.gz"
+      sha256 "0273fa6d9b8061a9ecfecdbd7625a8b9718ef670c679cd433ec36b5acf57fea6"
 
       def install
         bin.install "spg"
@@ -27,17 +27,17 @@ class Spg < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nekinci/spg/releases/download/v1.1.6/spg_1.1.6_linux_arm64.tar.gz"
-      sha256 "3c8a57499bfdbfd63e38a190823d32a0cfa1324f7c869201b0a6cf0efd590ddf"
+    if Hardware::CPU.intel?
+      url "https://github.com/nekinci/spg/releases/download/v1.0/spg_1.0_linux_amd64.tar.gz"
+      sha256 "2275a315111ff47826d28e5640ff775e7145dff5d7aa6fcf39ed900056146b80"
 
       def install
         bin.install "spg"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/nekinci/spg/releases/download/v1.1.6/spg_1.1.6_linux_amd64.tar.gz"
-      sha256 "9709842a29bea57a225803e5d1a6ce4d053a74e8c2c3d0acc9987276b488194d"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/nekinci/spg/releases/download/v1.0/spg_1.0_linux_arm64.tar.gz"
+      sha256 "77d135a840b3782a196a0ac254535172777a9730264dad4f17055bead8dad8a5"
 
       def install
         bin.install "spg"
