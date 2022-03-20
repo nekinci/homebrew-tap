@@ -5,20 +5,20 @@
 class Spg < Formula
   desc ""
   homepage "https://github.com/nekinci/spg"
-  version "1.0"
+  version "1.0.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/nekinci/spg/releases/download/v1.0/spg_1.0_darwin_amd64.tar.gz"
-      sha256 "7242834bd1494401615a8ddff8dd980e9c8de61d3334c78cf8bff613491c94e4"
+    if Hardware::CPU.arm?
+      url "https://github.com/nekinci/spg/releases/download/v1.0.0/spg_1.0.0_darwin_arm64.tar.gz"
+      sha256 "ba5957bf137250759730f18eeacb1401d33a4cb3cf4d84fddf8de1fc06f9737d"
 
       def install
         bin.install "spg"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/nekinci/spg/releases/download/v1.0/spg_1.0_darwin_arm64.tar.gz"
-      sha256 "0273fa6d9b8061a9ecfecdbd7625a8b9718ef670c679cd433ec36b5acf57fea6"
+    if Hardware::CPU.intel?
+      url "https://github.com/nekinci/spg/releases/download/v1.0.0/spg_1.0.0_darwin_amd64.tar.gz"
+      sha256 "e8f2c946163ec9da7e3358713babf563a44bc1868f1bb45de2037993449dcb39"
 
       def install
         bin.install "spg"
@@ -28,16 +28,16 @@ class Spg < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/nekinci/spg/releases/download/v1.0/spg_1.0_linux_amd64.tar.gz"
-      sha256 "2275a315111ff47826d28e5640ff775e7145dff5d7aa6fcf39ed900056146b80"
+      url "https://github.com/nekinci/spg/releases/download/v1.0.0/spg_1.0.0_linux_amd64.tar.gz"
+      sha256 "4c1b397eae50febb9a6b3f7adab2eb521e43258eb25ae74bb0517818cf407d63"
 
       def install
         bin.install "spg"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nekinci/spg/releases/download/v1.0/spg_1.0_linux_arm64.tar.gz"
-      sha256 "77d135a840b3782a196a0ac254535172777a9730264dad4f17055bead8dad8a5"
+      url "https://github.com/nekinci/spg/releases/download/v1.0.0/spg_1.0.0_linux_arm64.tar.gz"
+      sha256 "49742404e9fb73072d88df3cbe6e1da5736fdff4131aa475d37acaeddee281f8"
 
       def install
         bin.install "spg"
