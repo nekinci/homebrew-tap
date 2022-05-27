@@ -5,20 +5,20 @@
 class Spg < Formula
   desc ""
   homepage "https://github.com/nekinci/spg"
-  version "1.0.0"
+  version "1.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/nekinci/spg/releases/download/v1.0.0/spg_1.0.0_darwin_arm64.tar.gz"
-      sha256 "1bfa5f393f991a11229add112d79ba8e6464ee5de5d225524221a31d3ca5c0c9"
+      url "https://github.com/nekinci/spg/releases/download/v1.0/spg_1.0_darwin_arm64.tar.gz"
+      sha256 "d8272c21c978b5a779762715e3ceb96d1523f8d545df9bd5b16493cf2659dd4d"
 
       def install
         bin.install "spg"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/nekinci/spg/releases/download/v1.0.0/spg_1.0.0_darwin_amd64.tar.gz"
-      sha256 "af163a62608d8e8f2056bec61dccef0cdf2655a850dc19c3d29049f3039812b8"
+      url "https://github.com/nekinci/spg/releases/download/v1.0/spg_1.0_darwin_amd64.tar.gz"
+      sha256 "551e8717d58620a5f16eda0b7455d20f03e212cef914f96ba19a3a6724565d82"
 
       def install
         bin.install "spg"
@@ -28,16 +28,16 @@ class Spg < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/nekinci/spg/releases/download/v1.0.0/spg_1.0.0_linux_amd64.tar.gz"
-      sha256 "21e529972655f7d8dee9d687729f0a101d9af9880c5752a48c2c25f01b58b6de"
+      url "https://github.com/nekinci/spg/releases/download/v1.0/spg_1.0_linux_amd64.tar.gz"
+      sha256 "9e832e8cb7a6950e3f126745bad9796e9019667d7ce451cd44f5dad60996ccfd"
 
       def install
         bin.install "spg"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nekinci/spg/releases/download/v1.0.0/spg_1.0.0_linux_arm64.tar.gz"
-      sha256 "b0cf292f09eaf2e2e3b4834edf4d83c980df6c0f4d14f16b5eb9b20f51a0734c"
+      url "https://github.com/nekinci/spg/releases/download/v1.0/spg_1.0_linux_arm64.tar.gz"
+      sha256 "5d7fee612b9195bd61e141c81d359c347ffd298a6a5f0f673c988fa796eb5e18"
 
       def install
         bin.install "spg"
